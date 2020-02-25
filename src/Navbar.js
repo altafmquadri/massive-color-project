@@ -54,7 +54,7 @@ class Navbar extends Component {
                         horizontal: 'left'
                     }}
                         open={open}
-                        autoHideDuration={3000}
+                        autoHideDuration={1500}
                         message={<span>Format Changed To {format.toUpperCase()}</span>}
                         ContentProps={{
                             "aria-describedby": 'message-id'
