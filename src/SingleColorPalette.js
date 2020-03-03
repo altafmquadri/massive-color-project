@@ -40,7 +40,7 @@ class SingleColorPalette extends Component {
             <ColorBox key={color.hex}
                 name={color.name}
                 background={color[format]}
-                showLink={false} />
+                showingFullPalette={false} />
         ))
         return (
             <div className='SingleColorPalette Palette'>
