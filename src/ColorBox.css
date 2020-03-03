@@ -14,6 +14,7 @@
 
 .ColorBox.go-back {
   background-color: black;
+  position: relative;
 }
 
 .copy-button,
@@ -56,6 +57,14 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 12px;
+}
+
+.light-text {
+  color: white;
+}
+
+.ColorBox .dark-text {
+  color: rgb(0, 0, 0, 0.5);
 }
 
 .see-more {
