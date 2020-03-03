@@ -22,9 +22,6 @@ class App extends Component {
           render={(routerProps) =>
             <Palette palette={generatePalette(this.findPalette(routerProps.match.params.id))} />} />
       </Switch>
-      // <div>
-      //   <Palette palette={generatePalette(seedColors[4])} />
-      // </div>
     )
   }
 }
