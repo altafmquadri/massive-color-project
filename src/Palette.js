@@ -25,7 +25,7 @@ class Palette extends Component {
                 background={color[format]}
                 name={color.name}
                 id={color.id}
-                paletteId={id} />))
+                moreUrl={`/palette/${id}/${color.id}`} />))
 
         return (
             <div className='Palette'>
