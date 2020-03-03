@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import MiniPalette from './MiniPalette'
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom'
-import { blue } from '@material-ui/core/colors';
+
+
 
 const styles = {
     root: {

@@ -15,12 +15,13 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" render={(routerProps) => 
-        <PaletteList palettes={seedColors}
-          {...routerProps} />} />
+        <Route exact path="/" render={(routerProps) =>
+          <PaletteList palettes={seedColors}
+            {...routerProps} />} />
         <Route exact path="/palette/:id"
           render={(routerProps) =>
             <Palette palette={generatePalette(this.findPalette(routerProps.match.params.id))} />} />
+        <Route exact path='/palette/:paletteId/:colorId' render={() => <h1>Single Color Page</h1>} />
       </Switch>
     )
   }
