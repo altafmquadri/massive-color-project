@@ -70,7 +70,7 @@ const styles = theme => ({
         width: '100%'
     },
     button: {
-        width: '50%'   
+        width: '50%'
     }
 });
 
@@ -104,14 +104,10 @@ class NewPaletteForm extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
-    handleSubmit = (newPaletteName) => {
-
-        const NewPalette = {
-            paletteName: newPaletteName,
-            id: newPaletteName.toLocaleLowerCase().replace(/ /g, '-'),
-            colors: this.state.colors
-        }
-        this.props.savePalette(NewPalette)
+    handleSubmit = (newPalette) => {
+        newPalette.id = newPalette.paletteName.toLocaleLowerCase().replace(/ /g, '-')
+        newPalette.colors = this.state.colors
+        this.props.savePalette(newPalette)
         this.props.history.push('/')
     }
 
