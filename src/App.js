@@ -8,11 +8,12 @@ import './App.css';
 import Palette from './Palette'
 import seedColors from './seedColors'
 
+const savedPalettes = JSON.parse(window.localStorage.getItem('palettes'))
 
 class App extends Component {
 
   state = {
-    palettes: seedColors
+    palettes: savedPalettes || seedColors
   }
 
   findPalette = id => {
@@ -21,8 +22,12 @@ class App extends Component {
 
   savePalette = (newPalette) => {
     this.setState({
-       palettes: [...this.state.palettes, newPalette]  
-      })
+      palettes: [...this.state.palettes, newPalette]
+    }, this.syncLocalStorage)
+  }
+
+  syncLocalStorage = () => {
+    window.localStorage.setItem('palettes', JSON.stringify(this.state.palettes))
   }
 
   render() {
