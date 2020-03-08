@@ -62,6 +62,10 @@ class PaletteFormNav extends Component {
         this.setState({ formShowing: true });
     }
 
+    hideForm = () => {
+        this.setState({ formShowing: false });
+    }
+
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value });
     }
@@ -103,7 +107,8 @@ class PaletteFormNav extends Component {
                 </AppBar>
                 {this.state.formShowing && <PaletteMetaForm
                     palettes={palettes}
-                    handleSubmit={handleSubmit} />}
+                    handleSubmit={handleSubmit}
+                    hideForm={this.hideForm} />}
             </div>
         );
     }
