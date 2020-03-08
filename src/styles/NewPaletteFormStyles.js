@@ -4,7 +4,6 @@ const drawerWidth = DRAWER_WIDTH
 const styles = theme => ({
     root: {
         display: 'flex',
-        height: '100vh'
     },
 
     hide: {
@@ -13,6 +12,7 @@ const styles = theme => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
+        height: '100vh'
     },
     drawerPaper: {
         width: drawerWidth,
