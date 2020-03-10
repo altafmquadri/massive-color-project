@@ -21,7 +21,6 @@ class App extends Component {
   }
 
   deletePalette = id => {
-    console.log(id)
     this.setState(st => (
       {
         palettes: st.palettes.filter(p => p.id !== id)
