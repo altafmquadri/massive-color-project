@@ -13,6 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { arrayMove } from 'react-sortable-hoc';
 import styles from './styles/NewPaletteFormStyles'
+import seedColors from './seedColors'
 
 class NewPaletteForm extends Component {
     static defaultProps = {
@@ -21,7 +22,7 @@ class NewPaletteForm extends Component {
 
     state = {
         open: true,
-        colors: this.props.palettes[0].colors,
+        colors: seedColors[0].colors,
     };
 
     handleDrawerOpen = () => {
