@@ -6,26 +6,17 @@ import { withStyles } from '@material-ui/core/styles';
 import PaletteFooter from './PaletteFooter'
 import styles from './styles/PaletteStyles'
 
-
-
 class SingleColorPalette extends Component {
-    // constructor(props) {
-    //     super(props)
-    //     this._shades = this.gatherShades(this.props.palette, this.props.colorId)
-    //     console.log(this._shades)
-    // }
     state = {
         format: 'hex'
     }
 
     gatherShades = (palette, colorToFilterBy) => {
-
         let shades = []
         let allColors = palette.colors
 
         for (let key in allColors) {
             shades = [...shades, ...allColors[key].filter(color => color.id === colorToFilterBy)]
-
         }
         return shades.slice(1)
     }

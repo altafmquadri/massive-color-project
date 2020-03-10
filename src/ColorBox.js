@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { Link } from 'react-router-dom'
-import styles from './styles/ColorBoxStyles'
 import { withStyles } from '@material-ui/core/styles';
+
+import styles from './styles/ColorBoxStyles'
 
 
 

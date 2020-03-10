@@ -140,7 +140,6 @@ class NewPaletteForm extends Component {
                         onSortEnd={this.onSortEnd}
                         distance={20}
                     />
-
                 </main>
             </div>
         );
